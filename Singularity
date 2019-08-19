@@ -31,6 +31,15 @@ From: library/julia:1.0.2
   apt-get install -y gettext
   apt-get install -y hdf5-tools
   apt-get install -y r-base r-base-dev
+    apt-get install libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    libcairo2-dev \
+    libxt-dev
+
+  # Add a default CRAN mirror
+  echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.method = 'libcurl')" >> /usr/lib/R/etc/Rprofile.site
+
 
   #add julia packages
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Distributions\")"
