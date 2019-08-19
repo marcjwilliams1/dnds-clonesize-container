@@ -48,12 +48,12 @@ From: library/julia:1.0.2
   # Install R
   apt-get update
   apt-get install -y --no-install-recommends \
-    r-base=${R_VERSION} \
-    r-base-core=${R_VERSION} \
-    r-base-dev=${R_VERSION} \
-    r-recommended=${R_VERSION} \
-    r-base-html=${R_VERSION} \
-    r-doc-html=${R_VERSION} \
+    r-base \
+    r-base-core \
+    r-base-dev \
+    r-recommended \
+    r-base-html \
+    r-doc-html \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
