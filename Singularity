@@ -30,7 +30,6 @@ From: library/julia:1.0.2
 
   apt-get install -y --no-install-recommends apt-utils
   apt-get install -y gnupg2
-  apt-get install -y libcairo2
   apt-get install -y libfontconfig1
   apt-get install -y libpango1.0-0
   apt-get install -y libglib2.0-0
@@ -47,8 +46,6 @@ From: library/julia:1.0.2
   export LANG=en_US.UTF-8
 
   # Install R
-  echo "deb http://cran.r-project.org/bin/linux/ubuntu xenial-cran35/" > /etc/apt/sources.list.d/r.list
-  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
   apt-get update
   apt-get install -y --no-install-recommends \
     r-base=${R_VERSION}* \
