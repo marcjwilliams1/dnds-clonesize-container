@@ -15,7 +15,7 @@ From: library/julia:1.0.2
   . /environment
 
   # Software versions
-  export R_VERSION=3.5.3
+  export R_VERSION=3.5
 
   # use bash as default shell
   echo 'SHELL=/bin/bash' >> /environment
@@ -48,12 +48,12 @@ From: library/julia:1.0.2
   # Install R
   apt-get update
   apt-get install -y --no-install-recommends \
-    r-base=${R_VERSION}* \
-    r-base-core=${R_VERSION}* \
-    r-base-dev=${R_VERSION}* \
-    r-recommended=${R_VERSION}* \
-    r-base-html=${R_VERSION}* \
-    r-doc-html=${R_VERSION}* \
+    r-base=${R_VERSION} \
+    r-base-core=${R_VERSION} \
+    r-base-dev=${R_VERSION} \
+    r-recommended=${R_VERSION} \
+    r-base-html=${R_VERSION} \
+    r-doc-html=${R_VERSION} \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
