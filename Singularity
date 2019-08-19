@@ -15,7 +15,7 @@ From: library/julia:1.0.2
   . /environment
 
   # Software versions
-  export R_VERSION=3.5
+  export R_VERSION=3.5.2
 
   # use bash as default shell
   echo 'SHELL=/bin/bash' >> /environment
