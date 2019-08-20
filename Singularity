@@ -80,6 +80,9 @@ From: library/julia:1.0.2
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Plots\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Flux\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Revise\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Optim\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"StatsBase\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"LinearAlgebra\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"CancerSeqSim\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ProgressMeter\")"
 
