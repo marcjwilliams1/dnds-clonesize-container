@@ -69,23 +69,6 @@ From: library/julia:1.0.2
   echo "R_LIBS_SITE=/library:\${R_LIBS_SITE}" >> /usr/lib/R/etc/Renviron.site
 
 
-
-  #add julia packages
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Distributions\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"DataFrames\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Optim\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ArgParse\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Distances\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"CSV\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Plots\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Flux\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Revise\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Optim\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"StatsBase\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"LinearAlgebra\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"CancerSeqSim\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ProgressMeter\")"
-
   # add R packages from CRAN
   Rscript -e "install.packages(pkgs = c('devtools', 'ggplot2', 'dplyr', 'tidyr', 'stringr', 'cowplot', 'gtools', 'argparse','jcolors', 'ggthemes', 'viridis'), \
       repos='https://cran.revolutionanalytics.com/', \
@@ -108,6 +91,22 @@ From: library/julia:1.0.2
 
   # add R packages from github
    Rscript -e "library(devtools); install_github('im3sanger/dndscv')"
+
+  #add julia packages
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Distributions\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"DataFrames\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Optim\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ArgParse\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Distances\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"CSV\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Plots\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Flux\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Revise\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Optim\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"StatsBase\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"LinearAlgebra\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"CancerSeqSim\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ProgressMeter\")"
 
 %runscript
   # executes with the singularity run command
