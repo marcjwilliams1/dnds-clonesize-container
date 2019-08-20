@@ -75,6 +75,7 @@ From: library/julia:1.0.2
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"DataFrames\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Optim\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ArgParse\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Distances\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"CSV\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Plots\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Flux\")"
