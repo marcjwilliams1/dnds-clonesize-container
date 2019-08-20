@@ -34,6 +34,8 @@ From: library/julia:1.0.2
   apt-get install -y libpixman-1-0
   apt-get install -y gettext
   apt-get install -y hdf5-tools
+  apt-get install -y apt-transport-https
+  apt-get install -y ca-certificates
 
   # Set R Version
   export R_VERSION=3.6.0
