@@ -70,7 +70,7 @@ From: library/julia:1.0.2
 
 
   # add R packages from CRAN
-  Rscript -e "install.packages(pkgs = c('devtools', 'ggplot2', 'dplyr', 'tidyr', 'stringr', 'cowplot', 'gtools', 'argparse','jcolors', 'ggthemes', 'viridis'), \
+  Rscript -e "install.packages(pkgs = c('devtools', 'ggplot2', 'dplyr', 'tidyr', 'stringr', 'cowplot', 'gtools', 'argparse','jcolors', 'ggthemes', 'viridis', 'forcats', 'Hmisc', 'readr'), \
       repos='https://cran.revolutionanalytics.com/', \
       dependencies=TRUE, \
       clean = TRUE)"
@@ -88,6 +88,8 @@ From: library/julia:1.0.2
                     biocLite('seqinr')"
    R -e "source('https://bioconductor.org/biocLite.R'); \
                     biocLite('rtracklayer')"
+   R -e "source('https://bioconductor.org/biocLite.R'); \
+                    biocLite('TCGAbiolinks')"
 
   # add R packages from github
    Rscript -e "library(devtools); install_github('im3sanger/dndscv')"
@@ -107,6 +109,7 @@ From: library/julia:1.0.2
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"LinearAlgebra\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"CancerSeqSim\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ProgressMeter\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"NLSolversBase\")"
 
 %runscript
   # executes with the singularity run command
