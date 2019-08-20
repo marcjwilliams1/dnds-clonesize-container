@@ -36,7 +36,7 @@ From: library/julia:1.0.2
   apt-get install -y hdf5-tools
 
   # Set R Version
-  export R_VERSION=3.6
+  export R_VERSION=3.6.0
 
   # Configure default locale
   echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
@@ -46,8 +46,9 @@ From: library/julia:1.0.2
   export LANG=en_US.UTF-8
 
   # Install R
-  echo "deb https://cloud.r-project.org/bin/linux/ubuntu disco-cran35/" >> /etc/apt/sources.list
-  
+  echo "deb http://cran.r-project.org/bin/linux/ubuntu xenial-cran35/" > /etc/apt/sources.list.d/r.list
+  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+
   apt-get update
   apt-get install -y --no-install-recommends \
     r-base=${R_VERSION}-* \
