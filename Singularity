@@ -14,9 +14,6 @@ From: library/julia:1.0.2
   # load environment variables
   . /environment
 
-  # Software versions
-  export R_VERSION=3.5.2
-
   # use bash as default shell
   echo 'SHELL=/bin/bash' >> /environment
 
@@ -49,6 +46,8 @@ From: library/julia:1.0.2
   export LANG=en_US.UTF-8
 
   # Install R
+  echo "deb https://cloud.r-project.org/bin/linux/ubuntu disco-cran35/" >> /etc/apt/sources.list
+  
   apt-get update
   apt-get install -y --no-install-recommends \
     r-base=${R_VERSION}-* \
