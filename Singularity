@@ -84,7 +84,7 @@ From: library/julia:1.0.2
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ProgressMeter\")"
 
   # add R packages from CRAN
-  Rscript -e "install.packages(pkgs = c('devtools', 'cowplot', 'gtools', 'argparse', 'uwot', 'fuzzyjoin', 'dbscan', 'jcolors', 'ggthemes', 'viridis'), \
+  Rscript -e "install.packages(pkgs = c('devtools', 'ggplot2', 'dplyr', 'tidyr', 'stringr', 'cowplot', 'gtools', 'argparse','jcolors', 'ggthemes', 'viridis'), \
       repos='https://cran.revolutionanalytics.com/', \
       dependencies=TRUE, \
       clean = TRUE)"
@@ -94,6 +94,14 @@ From: library/julia:1.0.2
                     biocLite('GenomicRanges')"
    R -e "source('https://bioconductor.org/biocLite.R'); \
                      biocLite('IRanges')"
+   R -e "source('https://bioconductor.org/biocLite.R'); \
+                     biocLite('Biostrings')"
+   R -e "source('https://bioconductor.org/biocLite.R'); \
+                    biocLite('Rsamtools')"
+   R -e "source('https://bioconductor.org/biocLite.R'); \
+                    biocLite('seqinr')"
+   R -e "source('https://bioconductor.org/biocLite.R'); \
+                    biocLite('rtracklayer')"
 
   # add R packages from github
    Rscript -e "library(devtools); install_github('im3sanger/dndscv')"
