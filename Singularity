@@ -70,7 +70,7 @@ From: library/julia:1.0.2
 
 
   # add R packages from CRAN
-  Rscript -e "install.packages(pkgs = c('devtools', 'ggplot2', 'dplyr', 'tidyr', 'stringr', 'cowplot', 'gtools', 'argparse','jcolors', 'ggthemes', 'viridis', 'forcats', 'Hmisc', 'readr'), \
+  Rscript -e "install.packages(pkgs = c('devtools', 'ggplot2', 'dplyr', 'tidyr', 'stringr', 'cowplot', 'gtools', 'argparse','jcolors', 'ggthemes', 'viridis', 'forcats', 'Hmisc', 'readr', 'ggridges', 'readxl', 'purrr'), \
       repos='https://cran.revolutionanalytics.com/', \
       dependencies=TRUE, \
       clean = TRUE)"
@@ -104,12 +104,12 @@ From: library/julia:1.0.2
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Plots\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Flux\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Revise\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"Optim\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"StatsBase\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"LinearAlgebra\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"CancerSeqSim\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ProgressMeter\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"NLSolversBase\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"https://github.com/marcjwilliams1/StemCellModels.jl\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"https://github.com/marcjwilliams1/CancerSeqSim.jl\")"
 
 %runscript
   # executes with the singularity run command
