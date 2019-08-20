@@ -38,6 +38,9 @@ From: library/julia:1.0.2
   apt-get install -y gettext
   apt-get install -y hdf5-tools
 
+  # Set R Version
+  export R_VERSION=3.5.2
+
   # Configure default locale
   echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
   locale-gen en_US.utf8
@@ -48,12 +51,12 @@ From: library/julia:1.0.2
   # Install R
   apt-get update
   apt-get install -y --no-install-recommends \
-    r-base \
-    r-base-core \
-    r-base-dev \
-    r-recommended \
-    r-base-html \
-    r-doc-html \
+    r-base=${R_VERSION}-* \
+    r-base-core=${R_VERSION}-* \
+    r-base-dev=${R_VERSION}-* \
+    r-recommended=${R_VERSION}-* \
+    r-base-html=${R_VERSION}-* \
+    r-doc-html=${R_VERSION}-* \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
