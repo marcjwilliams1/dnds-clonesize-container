@@ -108,8 +108,9 @@ From: library/julia:1.0.2
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"LinearAlgebra\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"ProgressMeter\")"
   /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"NLSolversBase\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"https://github.com/marcjwilliams1/StemCellModels.jl\")"
-  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"https://github.com/marcjwilliams1/CancerSeqSim.jl\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.clone(\"https://github.com/marcjwilliams1/StemCellModels.jl\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.clone(\"https://github.com/marcjwilliams1/CancerSeqSim.jl\")"
+  /usr/local/julia/bin/julia -e "import Pkg; Pkg.add(\"RCall\")"
 
 %runscript
   # executes with the singularity run command
