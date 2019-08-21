@@ -28,6 +28,9 @@ From: library/julia:1.0.2
   # Set R Version
   export R_VERSION=3.6.0
 
+  apt-get update
+  apt-get install -y gnupg2
+
   # Configure default locale
   echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
   locale-gen en_US.utf8
@@ -39,8 +42,6 @@ From: library/julia:1.0.2
   echo "deb http://cran.r-project.org/bin/linux/ubuntu xenial-cran35/" > /etc/apt/sources.list.d/r.list
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
-  apt-get update
-  apt-get install -y gnupg2
   apt-get install -y --no-install-recommends \
     r-base=${R_VERSION}* \
     r-base-core=${R_VERSION}* \
