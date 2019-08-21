@@ -25,18 +25,6 @@ From: library/julia:1.0.2
   apt-get install -y --no-install-recommends \
     locales
 
-  apt-get install -y --no-install-recommends apt-utils
-  apt-get install -y gnupg2
-  apt-get install -y libfontconfig1
-  apt-get install -y libpango1.0-0
-  apt-get install -y libglib2.0-0
-  apt-get install -y libpng16-16
-  apt-get install -y libpixman-1-0
-  apt-get install -y gettext
-  apt-get install -y hdf5-tools
-  apt-get install -y apt-transport-https
-  apt-get install -y ca-certificates
-
   # Set R Version
   export R_VERSION=3.6.0
 
@@ -53,17 +41,17 @@ From: library/julia:1.0.2
 
   apt-get update
   apt-get install -y --no-install-recommends \
-    r-base=${R_VERSION}-* \
-    r-base-core=${R_VERSION}-* \
-    r-base-dev=${R_VERSION}-* \
-    r-recommended=${R_VERSION}-* \
-    r-base-html=${R_VERSION}-* \
-    r-doc-html=${R_VERSION}-* \
+    r-base=${R_VERSION}* \
+    r-base-core=${R_VERSION}* \
+    r-base-dev=${R_VERSION}* \
+    r-recommended=${R_VERSION}* \
+    r-base-html=${R_VERSION}* \
+    r-doc-html=${R_VERSION}* \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
     libcairo2-dev \
-    libxt-dev \
+    libxt-dev
 
 
   # Add a default CRAN mirror
@@ -72,6 +60,19 @@ From: library/julia:1.0.2
   # Add a directory for host R libraries
   mkdir -p /library
   echo "R_LIBS_SITE=/library:\${R_LIBS_SITE}" >> /usr/lib/R/etc/Renviron.site
+
+  # add some other libraries
+  apt-get install -y --no-install-recommends apt-utils
+  apt-get install -y gnupg2
+  apt-get install -y libfontconfig1
+  apt-get install -y libpango1.0-0
+  apt-get install -y libglib2.0-0
+  apt-get install -y libpng16-16
+  apt-get install -y libpixman-1-0
+  apt-get install -y gettext
+  apt-get install -y hdf5-tools
+  apt-get install -y apt-transport-https
+  apt-get install -y ca-certificates
 
   # add R packages from CRAN
   Rscript -e "install.packages(pkgs = c('devtools', 'ggplot2', 'dplyr', 'tidyr', 'stringr', 'cowplot', 'gtools', 'argparse','jcolors', 'ggthemes', 'viridis', 'forcats', 'Hmisc', 'readr', 'ggridges', 'readxl', 'purrr'), \
