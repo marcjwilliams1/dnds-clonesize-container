@@ -40,6 +40,7 @@ From: library/julia:1.0.2
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
   apt-get update
+  apt-get install -y gnupg2
   apt-get install -y --no-install-recommends \
     r-base=${R_VERSION}* \
     r-base-core=${R_VERSION}* \
@@ -63,7 +64,6 @@ From: library/julia:1.0.2
 
   # add some other libraries
   apt-get install -y --no-install-recommends apt-utils
-  apt-get install -y gnupg2
   apt-get install -y libfontconfig1
   apt-get install -y libpango1.0-0
   apt-get install -y libglib2.0-0
