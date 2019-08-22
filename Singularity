@@ -35,6 +35,6 @@ From: jupyter/datascience-notebook
   julia -e "import Pkg; Pkg.add(\"LinearAlgebra\")"
   julia -e "import Pkg; Pkg.add(\"ProgressMeter\")"
   julia -e "import Pkg; Pkg.add(\"NLSolversBase\")"
-  julia -e "import Pkg; Pkg.clone(\"https://github.com/marcjwilliams1/StemCellModels.jl\")"
-  julia -e "import Pkg; Pkg.clone(\"https://github.com/marcjwilliams1/CancerSeqSim.jl\")"
+  julia -e "import Pkg; Pkg.clone(\"https\://github.com/marcjwilliams1/StemCellModels.jl\")"
+  julia -e "import Pkg; Pkg.clone(\"https\://github.com/marcjwilliams1/CancerSeqSim.jl\")"
   julia -e "import Pkg; Pkg.add(\"RCall\")
