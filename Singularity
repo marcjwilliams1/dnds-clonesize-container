@@ -10,19 +10,19 @@ From: jupyter/datascience-notebook
 
 
   #add R packages from bioconductor
-   R -e "source('https://bioconductor.org/biocLite.R'); \
+   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
                     biocLite('GenomicRanges')"
-   R -e "source('https://bioconductor.org/biocLite.R'); \
+   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
                      biocLite('IRanges')"
-   R -e "source('https://bioconductor.org/biocLite.R'); \
+   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
                      biocLite('Biostrings')"
-   R -e "source('https://bioconductor.org/biocLite.R'); \
+   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
                     biocLite('Rsamtools')"
-   R -e "source('https://bioconductor.org/biocLite.R'); \
+   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
                     biocLite('seqinr')"
-   R -e "source('https://bioconductor.org/biocLite.R'); \
+   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
                     biocLite('rtracklayer')"
-   R -e "source('https://bioconductor.org/biocLite.R'); \
+   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
                     biocLite('TCGAbiolinks')"
 
   # add R packages from github
