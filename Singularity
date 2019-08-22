@@ -8,22 +8,15 @@ From: jupyter/datascience-notebook
       dependencies=TRUE, \
       clean = TRUE)"
 
-
   #add R packages from bioconductor
-   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
-                    biocLite('GenomicRanges')"
-   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
-                     biocLite('IRanges')"
-   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
-                     biocLite('Biostrings')"
-   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
-                    biocLite('Rsamtools')"
-   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
-                    biocLite('seqinr')"
-   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
-                    biocLite('rtracklayer')"
-   Rscript -e "source('https://bioconductor.org/biocLite.R'); \
-                    biocLite('TCGAbiolinks')"
+   Rscript -e "install.packages('BiocManager')"
+   Rscript -e "BiocManager::install('GenomicRanges')"
+   Rscript -e "BiocManager::install('IRanges')"
+   Rscript -e "BiocManager::install('Biostrings')"
+   Rscript -e "BiocManager::install('Rsamtools')"
+   Rscript -e "BiocManager::install('seqinr')"
+   Rscript -e "BiocManager::install('rtracklayer')"
+   Rscript -e "BiocManager::install('TCGAbiolinks')"
 
   # add R packages from github
    Rscript -e "library(devtools); install_github('im3sanger/dndscv')"
